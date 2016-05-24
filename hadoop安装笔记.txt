@@ -1,0 +1,17 @@
+1、hadoop用户名是hadoopusr1  密码hadoop
+用户名master  密码 hadoop
+2.vmmare  net链接  
+
+修改机器名（这步骤可以省略）
+每当ubuntu安装成功时机器名都默认为：ubuntu ，但为了以后集群中能够容易分辨各台服务器，需要给每台机器取个不同的名字。机器名由 /etc/hostname文件决定。
+1. 打开/etc/hostname文件;
+      $  sudo gedit /etc/hostname  
+2. 将/etc/hostname文件中的ubuntu改为对应机器，如主节点中，修改为"namenode"。 重启生效。
+3.修改/etc/hosts文件
+     $  sudo gedit /etc/hosts
+改为如下所示，并且将每台机器的IP设置为固定IP：
+127.0.0.1 localhost
+192.168.176.128 master
+192.168.176.129 node1
+192.168.176.130 datanode2
+
